@@ -5,3 +5,7 @@ variable "instance_type" {
         "example2" = "t3.large"
     }
 }
+
+variable "aws_region" {
+  default = "ap-northeast-2"
+}
