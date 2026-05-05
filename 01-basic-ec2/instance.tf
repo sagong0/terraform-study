@@ -49,5 +49,5 @@ resource "aws_security_group" "allow_ssh" {
 
 resource "aws_key_pair" "mykey" {
   key_name   = "demo-mykey"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDd584oaBeEXHjozQih3Zln7xwIwgmsaMcHOmDYYeDIjMn4R1ITK6Gc3ROMc5KWPRemLjBDvOLGdwmAP//ihweL/hvHAt5X3P2h2Zp1FOhhLFDjEXv6LHSKiMxxtBdHM9aHe/U1rJ4uu9JM2EGpbVez4VtSRCkkHmIqf3XvHG9np5dQkOgxkbdFacb/+b6W6WxfdWfGYsZc/ho4cLQV+vrD87lZrcb+j7Ix8C1ZraCR7f8fC1oJ4sonTuEfzMlFbqMQfqhQXvRb92Jgpy+zIT0298wd4GL1eoD8yCDyNb2oeG/F/kn0vYkCyuQy4tLtHtKmCckNbhK9TBM44e50ptffV2x2GQaWg1fSe6IDCtUEv2C35qUYnlwrn6XR9GibVB1R2R5NYrqJeojzHMWt55GTsTv5lccGAcy6g9hSeO06tu5/LNvZ9L25OCy4f6n6Oi3kUthtQcAbjtfwHwx4DyDMlex4gB9dO/yZ6nO6sBi6VmGmQr7b4TZEGBiLMZ6d7Jp6HSbgFlO3eNRAOGB+nWwu2j4d5PxDC8TFAPvoUGPcjPn7xtZebm1e9z74sTGW4BzYLMOapESO9WiGJ/liq4y3RMfkQwDDA8rJoJaPX0kHYuJF1PO7yD6jEfCtGbTuUM1rBixsMkRYsyxvOC73803KFV/q9XEqZhCFqzMSVrarlw== lee@DESKTOP-I37HGI8"
+  public_key = file(pathexpand("~/.ssh/mykey.pub"))
 }
