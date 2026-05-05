@@ -13,6 +13,11 @@ resource "aws_instance" "web" {
 
   key_name = aws_key_pair.mykey.key_name
 
+  # user_data = templatefile("${path.module}/templates/web.tpl", {
+  #   "region" = var.aws_region
+  #   "bucket_name" = var.bucket_name
+  # })
+
   tags = {
     Name="example"
   }
